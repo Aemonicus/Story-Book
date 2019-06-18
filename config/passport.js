@@ -15,7 +15,7 @@ module.exports = function(passport) {
       },
       (accessToken, refreshToken, profile, done) => {
         // const image = profile.photos[0].value.replace("s50-mo/", "");
-        const image = profile.photos[0];
+        const image = profile.photos[0].value;
 
         const newUser = {
           googleID: profile.id,
