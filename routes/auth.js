@@ -14,8 +14,8 @@ router.get(
   "/google/callback",
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, res) => {
-    // res.redirect("/dashboard"); Version du prof mais problème, ne renvoie pas sur l'accueil logée
-    res.redirect("/");
+    res.redirect("/dashboard"); 
+    // res.redirect("/");Version du prof mais problème, ne renvoie pas sur l'accueil logée
   }
 );
 

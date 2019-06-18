@@ -14,7 +14,8 @@ module.exports = function(passport) {
         proxy: true
       },
       (accessToken, refreshToken, profile, done) => {
-        const image = profile.photos[0].value.replace("s50-mo/", "");
+        // const image = profile.photos[0].value.replace("s50-mo/", "");
+        const image = profile.photos[0];
 
         const newUser = {
           googleID: profile.id,
